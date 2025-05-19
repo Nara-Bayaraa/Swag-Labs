@@ -4,18 +4,6 @@
 # Ignore node_modules folder
 node_modules
 
-# Ignore all text files
-*.txt
-
-# Ignore files related to API keys
-
-
-# Ignore SASS config files
-.sass-cache
-
-### CypressIO ###
-# gitignore template for the CypressIO, browser test framework
-# website: https://www.cypress.io/
 
 cypress/runner-results/*
 cypress/reports/*
