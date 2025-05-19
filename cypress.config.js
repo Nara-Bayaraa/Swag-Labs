@@ -4,7 +4,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: "https://www.saucedemo.com/v1/",
+    baseUrl: "https://www.saucedemo.com/",
     env: {
       standardUsername: process.env.STANDARD_USER_USERNAME,
       standardPassword: process.env.STANDARD_USER_PASSWORD,
