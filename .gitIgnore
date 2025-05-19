@@ -1,0 +1,26 @@
+# Ignore Mac system files
+.DS_store
+
+# Ignore node_modules folder
+node_modules
+
+# Ignore all text files
+*.txt
+
+# Ignore files related to API keys
+.env
+
+# Ignore SASS config files
+.sass-cache
+
+### CypressIO ###
+# gitignore template for the CypressIO, browser test framework
+# website: https://www.cypress.io/
+
+cypress/runner-results/*
+cypress/reports/*
+cypress/screenshots/*
+cypress/videos/*
+cypress/downloads/*
+cypress/parallel-weights.json
+cypress/multi-reporter-config.json

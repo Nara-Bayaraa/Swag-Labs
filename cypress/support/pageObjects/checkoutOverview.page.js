@@ -1,0 +1,103 @@
+class OverviewPage {
+  get overviewPageHeader() {
+    return cy.get(".subheader");
+  }
+  get productName() {
+    return cy.get(".inventory_item_name");
+  }
+  get productQuantity() {
+    return cy.get(".summary_quantity");
+  }
+  get productPrice() {
+    return cy.get(".inventory_item_price");
+  }
+  get paymentInformation() {
+    return cy.get(".summary_value_label").eq(0);
+  }
+  get shippingMethod() {
+    return cy.get(".summary_value_label").eq(1);
+  }
+  get itemTotal() {
+    return cy.get(".summary_subtotal_label");
+  }
+  get tax() {
+    return cy.get(".summary_tax_label");
+  }
+  get total() {
+    return cy.get(".summary_total_label");
+  }
+  get cancelButton() {
+    return cy.get('[class="cart_cancel_link btn_secondary"]');
+  }
+  get finishButton() {
+    return cy.get(".btn_action.cart_button");
+  }
+
+  verifyProductName(expectedName) {
+    this.productName.should("contain", expectedName);
+  }
+  verifyProductPrice(expectedPrice) {
+    this.productPrice.should("contain", expectedPrice);
+  }
+  verifyQuantity(expectedQty) {
+    this.productQuantity.should("contain", expectedQty);
+  }
+  verifyPaymentInfo(expectedInfo) {
+    this.paymentInformation.should("contain", expectedInfo);
+  }
+  verifyShippingMethod(expectedShipping) {
+    this.shippingMethod.should("contain", expectedShipping);
+  }
+  verifyItemTotal(expectedTotal) {
+    this.itemTotal.should("contain", expectedTotal);
+  }
+  verifyTax(expectedTax) {
+    this.tax.should("contain", expectedTax);
+  }
+  verifyTotal(expectedTotal) {
+    this.total.should("contain", expectedTotal);
+  }
+
+  verifyCancelButtonVisible() {
+    this.cancelButton
+      .should("be.visible")
+      .and("have.attr", "href", "./inventory.html");
+  }
+  verifyFinishButtonIsVisible() {
+    this.finishButton
+      .should("exist") // ensures it’s in the DOM
+      .should("be.visible") // ensures it's visible
+      .and("not.be.disabled"); // for buttons
+  }
+  assertFinishButtonColor() {
+    this.finishButton.should(
+      "have.css",
+      "background-color",
+      "rgb(226, 35, 26)"
+    );
+  }
+
+  clickCancelButton() {
+    this.cancelButton.click();
+  }
+  clickFinishButton() {
+    this.finishButton.click();
+  }
+  assertTotalMatchesDisplaydTotal(expectedTotal) {
+    cy.wrap(null)
+      .then(() => {
+        return this.itemTotal.invoke("text").then((itemTotalText) => {
+          return parseFloat(itemTotalText.replace("Item total: $", ""));
+        });
+      })
+      .then((itemTotalValue) => {
+        return this.tax.invoke("text").then((taxText) => {
+          const taxValue = parseFloat(taxText.replace("Tax: $", ""));
+
+          expectedTotal = (itemTotalValue + taxValue).toFixed(2);
+          this.total.should("contain", `$${expectedTotal}`);
+        });
+      });
+  }
+}
+export default new OverviewPage();
