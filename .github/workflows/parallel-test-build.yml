@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.0 
       - name: Load environment variables
-        uses: jpfulton/actions-dotenv@v1
+        uses: jpfulton/actions-dotenv@v1.1.1 
         with:
           path: .env
       - name: Install dependencies
@@ -25,15 +25,15 @@ jobs:
           STANDARD_USER_USERNAME: ${{ env.STANDARD_USER_USERNAME }}
           STANDARD_USER_PASSWORD: ${{ env.STANDARD_USER_PASSWORD }}
         with:
-          command: npm run test:Login -- -v 
+          command: npm run test:Login -- -v
 
   Products-Test:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.2.0 # Updated checkout version
       - name: Load environment variables
-        uses: jpfulton/actions-dotenv@v1
+        uses: jpfulton/actions-dotenv@v1.1.1 # Explicit version (example)
         with:
           path: .env
       - name: Install dependencies
@@ -41,7 +41,7 @@ jobs:
       - name: Cypress run - Products Tests
         uses: cypress-io/github-action@v6
         env:
-          STANDARD_USER_USERNAME: ${{ env.STANDARD_USER_USERNAME }} 
-          STANDARD_USER_PASSWORD: ${{ env.STANDARD_USER_PASSWORD }} 
+          STANDARD_USER_USERNAME: ${{ env.STANDARD_USER_USERNAME }}
+          STANDARD_USER_PASSWORD: ${{ env.STANDARD_USER_PASSWORD }}
         with:
-          command: npm run test:Products -- -v 
+          command: npm run test:Products -- -v
