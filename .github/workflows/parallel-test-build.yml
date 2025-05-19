@@ -13,10 +13,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.0 
-      - name: Load environment variables
-        uses: jpfulton/actions-dotenv@v1.1.1 
-        with:
-          path: .env
       - name: Install dependencies
         run: npm ci
       - name: Cypress run - Login Tests
@@ -32,10 +28,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.0 # Updated checkout version
-      - name: Load environment variables
-        uses: jpfulton/actions-dotenv@v1.1.1 # Explicit version (example)
-        with:
-          path: .env
       - name: Install dependencies
         run: npm ci
       - name: Cypress run - Products Tests
