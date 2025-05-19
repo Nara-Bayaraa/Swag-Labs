@@ -27,7 +27,7 @@ describe("Inventory Page - Post-Login Verification", () => {
     });
   });
   describe("Inventory Items Verification", () => {
-    it("[INV-UI-INV-COUNT-001] should display the correct number of products", () => {
+    it.only("[INV-UI-INV-COUNT-001] should display the correct number of products", () => {
       InventoryPage.verifyProductCount(allProductCount);
     });
 

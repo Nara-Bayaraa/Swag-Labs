@@ -16,10 +16,10 @@ class CheckoutPage {
     return cy.get(".checkout_info");
   }
   get cancelButton() {
-    return cy.get('[class="cart_cancel_link btn_secondary"]');
+    return cy.get('[data-test="cancel"]');
   }
   get continueButton() {
-    return cy.get('[class="btn_primary cart_button"]');
+    return cy.get('[data-test="continue"]');
   }
   get firstNameError() {
     return cy.get('h3[data-test="error"]');

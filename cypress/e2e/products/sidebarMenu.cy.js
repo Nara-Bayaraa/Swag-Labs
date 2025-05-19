@@ -61,7 +61,7 @@ describe("Sidebar Menu Functionality", () => {
       });
 
       it('[SB-UI-001] should navigate to the login page URL when "Logout" is clicked', () => {
-        cy.url().should("include", "index.html");
+        cy.url().should("include", "https://www.saucedemo.com/");
       });
 
       it('[SB-UI-002] should display the login form after "Logout" is clicked', () => {

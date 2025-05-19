@@ -7,7 +7,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "test:Login": "cypress run --spec cypress/e2e/login/positive-login.cy.js --browser chrome",
+   "test:Login": "cypress run --spec cypress/e2e/login/*.cy.js --browser chrome",
     "test:Products": "cypress run --spec cypress/e2e/products/cart.cy.js --browser chrome",
     "test:LoginPositive": "cypress run --spec cypress/e2e/login/positive-login.cy.js --browser chrome",
     "test:LoginNegative": "cypress run --spec cypress/e2e/login/negative-login.cy.js --browser chrome",

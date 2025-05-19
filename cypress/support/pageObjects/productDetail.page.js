@@ -12,13 +12,13 @@ class ProductDetailPage {
     return cy.get(".inventory_details_img");
   }
   get inventoryAddToCardButton() {
-    return cy.get('[class="btn_primary btn_inventory"]');
+    return cy.get('[data-test="add-to-cart"]');
   }
-  get inventoryBackButton() {
-    return cy.get(".inventory_details_back_button");
+  get inventoryBackToProductsButton() {
+    return cy.get('[data-test="back-to-products"]');
   }
   get inventoryRemoveButton() {
-    return cy.get('[class="btn_secondary btn_inventory"]');
+    return cy.get('[data-test="remove"]');
   }
    clickInventoryAddToCart() {
     this.inventoryAddToCardButton.click();
@@ -37,10 +37,10 @@ class ProductDetailPage {
   verifyAddToCardButtonIsVisible() {
     this.inventoryAddToCardButton
       .should("be.visible")
-      .and("contain", "ADD TO CART");
+      .and("contain", "Add to cart");
   }
   verifyBackButtonIsVisible() {
-    this.inventoryBackButton.should("be.visible").and("have.text", "<- Back");
+    this.inventoryBackToProductsButton.should("be.visible").and("have.text", "Back to products");
   }
     verifyRemoveButtonIsVisible() {
     this.inventoryRemoveButton.should("be.visible");
@@ -55,7 +55,7 @@ class ProductDetailPage {
     this.inventoryRemoveButton.click();
   }
   clickBackButton() {
-    this.inventoryBackButton.forceClick(); 
+    this.inventoryBackToProductsButton.forceClick(); 
   }
 }
 export default new ProductDetailPage();

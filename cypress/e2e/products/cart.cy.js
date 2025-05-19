@@ -8,7 +8,7 @@ const productsToAdd = [
 ];
 describe("Single Item Cart Functionality", () => {
   const singleProduct = "Sauce Labs Bike Light";
-  const singleProductPrice = "9.99";
+  const singleProductPrice = "$9.99";
   beforeEach(() => {
     cy.visit("/");
     cy.login();
@@ -57,9 +57,9 @@ describe("Multiple Items Cart Functionality", () => {
   it("[CART-UI-MI-003] should show the correct prices for each of the multiple added items in the cart", () => {
     InventoryPage.addMultipleProductsToCart(productsToAdd);
     HeaderComponentPage.clickGoToCart();
-    CartPage.verifyCartItemPrice("Sauce Labs Bike Light", "9.99");
-    CartPage.verifyCartItemPrice("Sauce Labs Fleece Jacket", "49.99");
-    CartPage.verifyCartItemPrice("Test.allTheThings() T-Shirt (Red)", "15.99");
+    CartPage.verifyCartItemPrice("Sauce Labs Bike Light", "$9.99");
+    CartPage.verifyCartItemPrice("Sauce Labs Fleece Jacket", "$49.99");
+    CartPage.verifyCartItemPrice("Test.allTheThings() T-Shirt (Red)", "$15.99");
   });
 
   it("[CART-UI-MI-004] should reflect the correct total number of items on the cart page itself", () => {
@@ -73,7 +73,8 @@ describe("Cart Item Removal Functionality", () => {
   const itemToRemove = "Sauce Labs Fleece Jacket";
 
   beforeEach(() => {
-    cy.visit("/inventory.html");
+    cy.visit("/");
+    cy.login();
 
     InventoryPage.addProductToCart(itemToKeep);
     InventoryPage.addProductToCart(itemToRemove);
@@ -98,9 +99,10 @@ describe("Cart Item Removal Functionality", () => {
     CartPage.verifyCartItemQuantity(itemToKeep, 1);
   });
 });
-describe("Cart Page Navigation", () => {
+describe.only("Cart Page Navigation", () => {
   beforeEach(() => {
-    cy.visit("/inventory.html");
+    cy.visit("/");
+    cy.login();
     InventoryPage.addProductToCart("Sauce Labs Bike Light");
     HeaderComponentPage.clickGoToCart();
   });

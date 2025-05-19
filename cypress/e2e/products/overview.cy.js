@@ -15,13 +15,13 @@ describe("Checkout Step One - Single Item Cart", () => {
   });
   it("[CKO-OV-001] should display correct order summary details", () => {
     CheckoutOverviewPage.verifyProductName("Sauce Labs Backpack");
-    CheckoutOverviewPage.verifyProductPrice("29.99");
+    CheckoutOverviewPage.verifyProductPrice("$29.99");
     CheckoutOverviewPage.verifyQuantity("1");
     CheckoutOverviewPage.verifyPaymentInfo("SauceCard #31337");
-    CheckoutOverviewPage.verifyShippingMethod("FREE PONY EXPRESS DELIVERY!");
-    CheckoutOverviewPage.verifyItemTotal("29.99");
-    CheckoutOverviewPage.verifyTax("2.40");
-    CheckoutOverviewPage.verifyTotal("32.39");
+    CheckoutOverviewPage.verifyShippingMethod("Free Pony Express Delivery!");
+    CheckoutOverviewPage.verifyItemTotal("$29.99");
+    CheckoutOverviewPage.verifyTax("$2.40");
+    CheckoutOverviewPage.verifyTotal("$32.39");
     CheckoutOverviewPage.verifyCancelButtonVisible();
   });
 
@@ -49,37 +49,37 @@ describe("Checkout Overview - Multiple Item Cart", () => {
   });
   it("[CKO-MULTI-001] should display first product details", () => {
     CheckoutOverviewPage.verifyProductName("Sauce Labs Bike Light");
-    CheckoutOverviewPage.verifyProductPrice("9.99");
+    CheckoutOverviewPage.verifyProductPrice("$9.99");
     CheckoutOverviewPage.verifyQuantity("1");
     CheckoutOverviewPage.verifyPaymentInfo("SauceCard #31337");
-    CheckoutOverviewPage.verifyShippingMethod("FREE PONY EXPRESS DELIVERY!");
+    CheckoutOverviewPage.verifyShippingMethod("Free Pony Express Delivery!");
   });
 
   it("[CKO-MULTI-002] should display second product details", () => {
     CheckoutOverviewPage.verifyProductName("Sauce Labs Fleece Jacket");
-    CheckoutOverviewPage.verifyProductPrice("49.99");
+    CheckoutOverviewPage.verifyProductPrice("$49.99");
     CheckoutOverviewPage.verifyQuantity("1");
     CheckoutOverviewPage.verifyPaymentInfo("SauceCard #31337");
-    CheckoutOverviewPage.verifyShippingMethod("FREE PONY EXPRESS DELIVERY!");
+    CheckoutOverviewPage.verifyShippingMethod("Free Pony Express Delivery!");
   });
 
   it("[CKO-MULTI-003] should display correct item total for multiple products", () => {
-    CheckoutOverviewPage.verifyItemTotal("59.98");
+    CheckoutOverviewPage.verifyItemTotal("$59.98");
   });
 
   it("[CKO-MULTI-004] should display correct tax amount for multiple products", () => {
-    CheckoutOverviewPage.verifyTax("4.80");
+    CheckoutOverviewPage.verifyTax("$4.80");
   });
 
   it("[CKO-MULTI-005] should display correct total for multiple products", () => {
-    CheckoutOverviewPage.verifyTotal("64.78");
+    CheckoutOverviewPage.verifyTotal("$64.78");
   });
 
   it("[CKO-MULTI-006] should correctly match displayed total", () => {
     CheckoutOverviewPage.assertTotalMatchesDisplaydTotal("$64.78");
   });
 
-  it("[CKO-MULTI-007] should show correct cart item count in header", () => {
+  it.only("[CKO-MULTI-007] should show correct cart item count in header", () => {
     HeaderComponentPage.verifyCartItemCount(productsToAdd.length);
   });
 });

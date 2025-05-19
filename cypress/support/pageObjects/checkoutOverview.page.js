@@ -6,7 +6,7 @@ class OverviewPage {
     return cy.get(".inventory_item_name");
   }
   get productQuantity() {
-    return cy.get(".summary_quantity");
+    return cy.get('[data-test="item-quantity"]');
   }
   get productPrice() {
     return cy.get(".inventory_item_price");
@@ -15,7 +15,7 @@ class OverviewPage {
     return cy.get(".summary_value_label").eq(0);
   }
   get shippingMethod() {
-    return cy.get(".summary_value_label").eq(1);
+    return cy.get('[data-test="shipping-info-value"]');
   }
   get itemTotal() {
     return cy.get(".summary_subtotal_label");
@@ -27,7 +27,7 @@ class OverviewPage {
     return cy.get(".summary_total_label");
   }
   get cancelButton() {
-    return cy.get('[class="cart_cancel_link btn_secondary"]');
+    return cy.get('[data-test="cancel"]');
   }
   get finishButton() {
     return cy.get(".btn_action.cart_button");
@@ -60,8 +60,7 @@ class OverviewPage {
 
   verifyCancelButtonVisible() {
     this.cancelButton
-      .should("be.visible")
-      .and("have.attr", "href", "./inventory.html");
+      .should("be.visible");
   }
   verifyFinishButtonIsVisible() {
     this.finishButton
@@ -73,7 +72,7 @@ class OverviewPage {
     this.finishButton.should(
       "have.css",
       "background-color",
-      "rgb(226, 35, 26)"
+      "rgb(61, 220, 145)"
     );
   }
 

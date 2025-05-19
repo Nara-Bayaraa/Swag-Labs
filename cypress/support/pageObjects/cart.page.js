@@ -15,10 +15,10 @@ class CartPage {
     return cy.get('[class="btn_secondary cart_button"]');
   }
   get checkoutButton() {
-    return cy.get('[class="btn_action checkout_button"]');
+    return cy.get('#checkout');
   }
   get continueShoppingButton() {
-    return cy.get('[class="btn_secondary"]');
+    return cy.get('#continue-shopping');
   }
 
   verifyCartItemIsVisible(productName) {
@@ -55,19 +55,15 @@ class CartPage {
       .and("have.attr", "href", "./checkout-step-one.html")
       .and("have.text", "CHECKOUT");
   }
-
   verifyContinueShoppingButtonIsVisible() {
-    this.continueShoppingButton.should("be.visible").and("have.attr", "href");
+    this.continueShoppingButton.should("be.visible")
   }
-
   clickContinueShoppingButton() {
     this.continueShoppingButton.click();
   }
-
   verifyTotalCartItems(expectedCount) {
     cy.get(".cart_item").should("have.length", expectedCount);
   }
-
   clickRemoveButton(productName) {
     cy.contains(".cart_item", productName)
       .find(".btn_secondary.cart_button")

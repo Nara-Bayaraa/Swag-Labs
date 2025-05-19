@@ -27,10 +27,10 @@ class Login {
     return cy.get('[class="bm-item menu-item"]').contains("Logout");
   }
   get errorMessage() {
-    return cy.get("h3[data-test='error']");
+    return cy.get('[data-test="error"]');
   }
   get modalCloseButton() {
-    return cy.get("svg[role='img']");
+    return cy.get('[data-test="error-button"]');
   }
   get passwordRequiredMessage() {
     return cy.get("h3[data-test='error']");

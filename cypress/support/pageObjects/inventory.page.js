@@ -137,7 +137,7 @@ class InventoryPage {
       cy.get(".inventory_item_img").find("img").should("be.visible");
       cy.get(".inventory_item_name").should("be.visible").and("not.be.empty");
       cy.get(".inventory_item_price").should("be.visible").and("not.be.empty");
-      cy.get('[class="btn_primary btn_inventory"]').should("be.visible");
+      cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').should("be.visible");
     });
   }
 }

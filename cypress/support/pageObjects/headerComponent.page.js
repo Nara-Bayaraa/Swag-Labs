@@ -1,12 +1,12 @@
 class HeaderComponentPage {
-  get productsHeader() {
-    return cy.get(".product_label");
+  get productsTitle() {
+    return cy.get('[data-test="title"]');
   }
   get hamburgerMenuButton() {
     return cy.get('[class="bm-burger-button"]');
   }
   get cartItemCountBadge() {
-    return cy.get('[class="fa-layers-counter shopping_cart_badge"]');
+    return cy.get('[data-test="shopping-cart-badge"]');
   }
   get shoppingCart() {
     return cy.get("#shopping_cart_container");
@@ -18,7 +18,7 @@ class HeaderComponentPage {
     this.inventoryPageHeaderLogo.should("exist");
   }
   verifyProductHeaderIsVisible() {
-    this.productsHeader.should("be.visible");
+    this.productsTitle.should("be.visible");
   }
   verifyHamburgerMenuButtonIsVisible() {
     this.hamburgerMenuButton.should("be.visible");
@@ -27,7 +27,7 @@ class HeaderComponentPage {
     this.shoppingCart.should("be.visible");
   }
   verifyHeaderElementsAreVisible() {
-    this.productsHeader.should("be.visible");
+    this.productsTitle.should("be.visible");
     this.hamburgerMenuButton.should("be.visible");
     this.shoppingCart.should("be.visible");
   }
