@@ -23,7 +23,7 @@ describe("UI: Login Functionality - Negative Tests", () => {
       );
     });
 
-    it.only("[LOGIN-UI-NEG-003] should allow closing the error message", () => {
+    it("[LOGIN-UI-NEG-003] should allow closing the error message", () => {
       LoginPage.assertLoginErrorMessageIsDisplayed(
         "Epic sadface: Username and password do not match any user in this service"
       );
