@@ -1,5 +1,3 @@
-# Swag-Labs-Project 
-
 # Swag Labs UI Testing 💻
 
 ## Project Overview
@@ -60,7 +58,7 @@ cypress/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/nara-bayaraa/swag-labs-ui-testing.git
+git clone https://github.com/Nara-Bayaraa/Swag-Labs.git
 cd swag-labs-ui-testing
 ```
 
