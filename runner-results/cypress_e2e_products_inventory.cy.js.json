@@ -1,0 +1,10 @@
+{
+  "suites": 2,
+  "tests": 1,
+  "passes": 1,
+  "pending": 0,
+  "failures": 0,
+  "start": "2025-05-21T01:48:05.731Z",
+  "duration": 2009,
+  "file": "cypress/e2e/products/inventory.cy.js"
+}

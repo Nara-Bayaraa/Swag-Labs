@@ -1,0 +1,10 @@
+{
+  "suites": 3,
+  "tests": 11,
+  "passes": 11,
+  "pending": 0,
+  "failures": 0,
+  "start": "2025-05-21T01:47:39.917Z",
+  "duration": 18348,
+  "file": "cypress/e2e/products/checkout.cy.js"
+}

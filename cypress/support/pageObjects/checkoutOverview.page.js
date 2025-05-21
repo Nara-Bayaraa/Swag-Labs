@@ -30,7 +30,7 @@ class OverviewPage {
     return cy.get('[data-test="cancel"]');
   }
   get finishButton() {
-    return cy.get(".btn_action.cart_button");
+    return cy.get('[data-test="finish"]');
   }
 
   verifyProductName(expectedName) {
@@ -68,6 +68,9 @@ class OverviewPage {
       .should("be.visible") // ensures it's visible
       .and("not.be.disabled"); // for buttons
   }
+  verifyFinishButtonIsVisible(){
+    this.finishButton.should('be.enabled')
+  }
   assertFinishButtonColor() {
     this.finishButton.should(
       "have.css",
@@ -75,7 +78,9 @@ class OverviewPage {
       "rgb(61, 220, 145)"
     );
   }
-
+verifyFinishButtonIsClickable(){
+  this.finishButton.should('be.enabled')
+}
   clickCancelButton() {
     this.cancelButton.click();
   }
