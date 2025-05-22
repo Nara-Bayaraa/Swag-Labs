@@ -9,8 +9,8 @@
   "scripts": {
     "test:Login": "cypress run --spec cypress/e2e/login/*.cy.js --browser chrome",
     "test:Products": "cypress run --spec cypress/e2e/products/cart.cy.js --browser chrome",
-    "test:LoginPositive": "cypress run --spec cypress/e2e/login/positive-login.cy.js --browser chrome",
-    "test:LoginNegative": "cypress run --spec cypress/e2e/login/negative-login.cy.js --browser chrome",
+    "test:LoginPositive": "cypress run --spec cypress/e2e/login/login-positive.cy.js --browser chrome",
+    "test:LoginNegative": "cypress run --spec cypress/e2e/login/login-negative.cy.js --browser chrome",
     "test:Cart": "cypress run --spec cypress/e2e/products/cart.cy.js --browser chrome",
     "test:Inventory": "cypress run --spec cypress/e2e/products/inventory.cy.js --browser chrome",
     "test:InventorySort": "cypress run --spec cypress/e2e/products/inventorySort.cy.js --browser chrome",

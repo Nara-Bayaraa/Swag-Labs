@@ -21,7 +21,7 @@ class CheckoutPage {
   get continueButton() {
     return cy.get('[data-test="continue"]');
   }
-  get firstNameError() {
+  get errorMessage() {
     return cy.get('h3[data-test="error"]');
   }
 
@@ -46,7 +46,7 @@ class CheckoutPage {
   }
 
   assertErrorMessageIsDisplayed(expectedMessage) {
-    this.firstNameError.should("be.visible").and("have.text", expectedMessage);
+    this.errorMessage.should("be.visible").and("have.text", expectedMessage);
   }
 
   fillFirstName(firstName) {
