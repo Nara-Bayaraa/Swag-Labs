@@ -9,6 +9,7 @@
   "scripts": {
     "test:Login": "cypress run --spec cypress/e2e/login/*.cy.js --browser chrome",
     "test:Products": "cypress run --spec cypress/e2e/products/cart.cy.js --browser chrome",
+    
     "test:LoginPositive": "cypress run --spec cypress/e2e/login/login-positive.cy.js --browser chrome",
     "test:LoginNegative": "cypress run --spec cypress/e2e/login/login-negative.cy.js --browser chrome",
     "test:Cart": "cypress run --spec cypress/e2e/products/cart.cy.js --browser chrome",

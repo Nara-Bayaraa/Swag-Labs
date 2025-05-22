@@ -1,4 +1,3 @@
-//sorting constants
 export const SortOptions = {
   NAME_ASC: 'az',
   NAME_DESC: 'za',
