@@ -1,13 +1,13 @@
 import { faker } from "@faker-js/faker";
 
 // Generate a random first name
-const fakerFirstName = faker.person.firstName();
+const firstName = faker.person.firstName();
 // Generate a random last name
-const fakerLastName = faker.person.lastName();
+const lastName = faker.person.lastName();
 // Generate a random zip code
-const fakerZipCode = faker.location.zipCode();
+const zipCode = faker.location.zipCode();
 
-export { fakerFirstName, fakerLastName, fakerZipCode };
+export { firstName, lastName, zipCode };
 
 export const generateRandomUserData = () => ({
   firstName: faker.person.firstName(),

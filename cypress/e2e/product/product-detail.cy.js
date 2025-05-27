@@ -1,6 +1,6 @@
-import ProductDetailPage from "../../support/pageObjects/productDetail.page";
-import HeaderComponentPage from "../../support/pageObjects/headerComponent.page";
-import InventoryPage from "../../support/pageObjects/inventory.page";
+import ProductDetailPage from "../../support/page-objects/product-detail.page";
+import HeaderComponentPage from "../../support/page-objects/header-component.page";
+import InventoryPage from "../../support/page-objects/inventory.page";
 
 // --- Test Suite for Product Detail Page UI ---
 describe("Product Detail Page - UI Verification", () => {

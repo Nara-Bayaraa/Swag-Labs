@@ -1,7 +1,7 @@
-import SidebarMenuPage from "../../support/pageObjects/sidebarMenu.page";
-import HeaderComponentPage from "../../support/pageObjects/headerComponent.page";
-import InventoryPage from "../../support/pageObjects/inventory.page";
-import LoginPage from "../../support/pageObjects/login.page";
+import SidebarMenuPage from "../../support/page-objects/sidebar-menu.page";
+import HeaderComponentPage from "../../support/page-objects/header-component.page";
+import InventoryPage from "../../support/page-objects/inventory.page";
+import LoginPage from "../../support/page-objects/login.page";
 
 describe("Sidebar Menu Functionality", () => {
   beforeEach(() => {

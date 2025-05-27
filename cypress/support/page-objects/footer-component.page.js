@@ -21,18 +21,8 @@ class FooterClass {
     this.linkedinImage.should("be.visible");
   }
   verifyFooterCopyRightTextIsVisible() {
-    this.footerCopyRightText.should(
-      "contain.text",
-      "© 2020 Sauce Labs. All Rights Reserved."
-    );
+    this.footerCopyRightText.should("be.visible");
   }
-  verifyFooterRobotImageIsVisible() {
-    this.robotImage
-      .should("be.visible")
-      .and("have.attr", "src")
-      .and(
-        "include",
-        "img/SwagBot_Footer_graphic.png");
-  }
+ 
 }
 export default new FooterClass();

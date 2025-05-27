@@ -1,8 +1,8 @@
-import LoginPage from './pageObjects/login.page.js'; // Corrected path with quotes
-import InventoryPage from '../support/pageObjects/inventory.page';
-import HeaderComponentPage from '../support/pageObjects/headerComponent.page';
-import CartPage from '../support/pageObjects/cart.page';
-import CheckoutPage from './pageObjects/checkout.page.js';
+import LoginPage from './page-objects/login.page.js'; // Corrected path with quotes
+import InventoryPage from '../support/page-objects/inventory.page';
+import HeaderComponentPage from '../support/page-objects/header-component.page.js';
+import CartPage from '../support/page-objects/cart.page';
+import CheckoutPage from './page-objects/checkout.page.js';
 
 
 Cypress.Commands.add('login',()=> {

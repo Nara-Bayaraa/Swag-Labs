@@ -7,21 +7,19 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "test:Login": "cypress run --spec cypress/e2e/login/*.cy.js --browser chrome",
-    "test:Products": "cypress run --spec cypress/e2e/products/cart.cy.js --browser chrome",
-    
-    "test:LoginPositive": "cypress run --spec cypress/e2e/login/login-positive.cy.js --browser chrome",
-    "test:LoginNegative": "cypress run --spec cypress/e2e/login/login-negative.cy.js --browser chrome",
-    "test:Cart": "cypress run --spec cypress/e2e/products/cart.cy.js --browser chrome",
-    "test:Inventory": "cypress run --spec cypress/e2e/products/inventory.cy.js --browser chrome",
-    "test:InventorySort": "cypress run --spec cypress/e2e/products/inventorySort.cy.js --browser chrome",
-    "test:Overview": "cypress run --spec cypress/e2e/products/overview.cy.js --browser chrome",
-    "test:Checkout": "cypress run --spec cypress/e2e/products/checkout.cy.js --browser chrome",
-    "test:SidebarMenu": "cypress run --spec cypress/e2e/products/sidebarMenu.cy.js --browser chrome",
-    "test:ProductDetail": "cypress run --spec cypress/e2e/products/productDetail.cy.js --browser chrome",
-    "test:CheckoutComplete": "cypress run --spec cypress/e2e/products/checkoutComplete.cy.js --browser chrome",
     "cy:open": "cypress open",
-    "cy:run": "cypress run --browser chrome",
+  "test:all": "cypress run --browser chrome",
+"cy:run": "cypress run --browser chrome",
+  "test:login": "cypress run --spec 'cypress/e2e/login/*.cy.js' --browser chrome",
+"test:inventory": "cypress run --spec 'cypress/e2e/inventory/*.cy.js' --browser chrome",
+"test:cart": "cypress run --spec 'cypress/e2e/cart/*.cy.js' --browser chrome",
+"test:product": "cypress run --spec 'cypress/e2e/product/*.cy.js' --browser chrome",
+"test:checkout": "cypress run --spec 'cypress/e2e/checkout/*.cy.js' --browser chrome",
+"test:sidebar": "cypress run --spec 'cypress/e2e/sidebar/*.cy.js' --browser chrome",
+
+
+  "cy:parallel": "cypress-parallel -s cy:run -t 5 -d 'cypress/e2e/**/*.cy.js' -e '**/*.DS_Store'",
+
     "cy:parallel:products": "cypress-parallel -s cy:run -t 8 -d 'cypress/e2e/products/**/*.cy.js' -e '**/*.DS_Store'",
     "cy:parallel:login": "cypress-parallel -s cy:run -t 2 -d 'cypress/e2e/login/**/*.cy.js' -e '**/*.DS_Store'",
     "clean:reports": "rm -rf cypress/reports",
