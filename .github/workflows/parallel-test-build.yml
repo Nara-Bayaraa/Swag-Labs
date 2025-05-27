@@ -35,4 +35,4 @@ jobs:
         env:
           STANDARD_USER_USERNAME: ${{ secrets.STANDARD_USER_USERNAME }}
           STANDARD_USER_PASSWORD: ${{ secrets.STANDARD_USER_PASSWORD }}
-        run: npm run cy:parallel:all
+        run: npm run cy:parallel
