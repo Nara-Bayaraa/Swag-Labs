@@ -41,7 +41,7 @@ class CartPage {
     cy.contains(".cart_item", productName)
       .find(".inventory_item_price")
       .invoke("text")
-      .should("match", /^\d+(\.\d{2})?$/); // Ensures valid price format
+      .should("match", /^\d+(\.\d{2})?$/); 
   }
 
   verifyCartItemPrice(productName, expectedPrice) {
