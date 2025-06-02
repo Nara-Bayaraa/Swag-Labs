@@ -14,12 +14,13 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {},
   },
 
-  reporter: "mochawesome",
-  reporterOptions: {
-    charts: true,
-    reportDir: "reports/mochawesome",
-    overwrite: false,
-    html: false,
-    json: true,
-  },
+ reporter: "mochawesome",
+reporterOptions: {
+  charts: true,
+  reportDir: "reports/mochawesome",
+  overwrite: false,
+  html: false,   
+  json: true,    
+},
+
 });
