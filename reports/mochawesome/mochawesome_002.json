@@ -1,0 +1,376 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 10,
+    "passes": 10,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-21T02:01:29.932Z",
+    "end": "2025-05-21T02:01:40.473Z",
+    "duration": 10541,
+    "testsRegistered": 10,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d05f1de7-b1c3-4117-97fc-8ca6a26c3be0",
+      "title": "",
+      "fullFile": "cypress/e2e/products/InventorySort.cy.js",
+      "file": "cypress/e2e/products/InventorySort.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fae5d8c3-e3d7-4f1c-bc84-0884d96ec52c",
+          "title": "Inventory Page - Sorting Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "54d35c88-1cf1-4cbe-b3e0-a21a400c91ac",
+              "title": "Initial State and Sort Options Visibility",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "[SRT-DEF-001] should verify the default sorting order when the product list is initially loaded",
+                  "fullTitle": "Inventory Page - Sorting Functionality Initial State and Sort Options Visibility [SRT-DEF-001] should verify the default sorting order when the product list is initially loaded",
+                  "timedOut": null,
+                  "duration": 1047,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_inventory.default.verifyPredifinedDefaultOrder();",
+                  "err": {},
+                  "uuid": "28fd40af-0710-43ee-902d-60b0af714640",
+                  "parentUUID": "54d35c88-1cf1-4cbe-b3e0-a21a400c91ac",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "[SRT-UI-002] should verify all sorting options are present and visible in the sort dropdown",
+                  "fullTitle": "Inventory Page - Sorting Functionality Initial State and Sort Options Visibility [SRT-UI-002] should verify all sorting options are present and visible in the sort dropdown",
+                  "timedOut": null,
+                  "duration": 970,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_inventory.default.verifyAllSortingOptionsAreVisible();",
+                  "err": {},
+                  "uuid": "fb0397bf-c027-4bb0-8ab5-6ef45d8da156",
+                  "parentUUID": "54d35c88-1cf1-4cbe-b3e0-a21a400c91ac",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "28fd40af-0710-43ee-902d-60b0af714640",
+                "fb0397bf-c027-4bb0-8ab5-6ef45d8da156"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2017,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "72ff7428-65e1-4f56-9031-989ae0bd0b63",
+              "title": "Sorting by Name (A to Z)",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "[SRT-UI-AZ-001] should update the sort dropdown UI when 'Name (A to Z)' is selected",
+                  "fullTitle": "Inventory Page - Sorting Functionality Sorting by Name (A to Z) [SRT-UI-AZ-001] should update the sort dropdown UI when 'Name (A to Z)' is selected",
+                  "timedOut": null,
+                  "duration": 1000,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_inventory.default.selectSortOption(_constants.SortOptions.NAME_ASC);\n_inventory.default.verifySortValue(\"az\");",
+                  "err": {},
+                  "uuid": "924979b5-501f-417c-971a-d964f14cc5fb",
+                  "parentUUID": "72ff7428-65e1-4f56-9031-989ae0bd0b63",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "[SRT-FUNC-AZ-002] should correctly sort products by 'Name (A to Z)'",
+                  "fullTitle": "Inventory Page - Sorting Functionality Sorting by Name (A to Z) [SRT-FUNC-AZ-002] should correctly sort products by 'Name (A to Z)'",
+                  "timedOut": null,
+                  "duration": 1032,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_inventory.default.selectSortOption(_constants.SortOptions.NAME_ASC);\n_inventory.default.verifyProductNamesSortedAsc();",
+                  "err": {},
+                  "uuid": "c0b389a1-4921-4e74-870f-48e4afde2470",
+                  "parentUUID": "72ff7428-65e1-4f56-9031-989ae0bd0b63",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "924979b5-501f-417c-971a-d964f14cc5fb",
+                "c0b389a1-4921-4e74-870f-48e4afde2470"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2032,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "3b478a73-e158-4d74-8ac5-c71f10d41c96",
+              "title": "Sorting by Name (Z to A)",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "[SRT-UI-ZA-001] should update the sort dropdown UI when 'Name (Z to A)' is selected",
+                  "fullTitle": "Inventory Page - Sorting Functionality Sorting by Name (Z to A) [SRT-UI-ZA-001] should update the sort dropdown UI when 'Name (Z to A)' is selected",
+                  "timedOut": null,
+                  "duration": 1043,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_inventory.default.selectSortOption(_constants.SortOptions.NAME_DESC);\n_inventory.default.verifySortValue(\"za\");",
+                  "err": {},
+                  "uuid": "af781869-0471-4487-a13c-af85c8f9947e",
+                  "parentUUID": "3b478a73-e158-4d74-8ac5-c71f10d41c96",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "[SRT-UI-ZA-002] should correctly sort products by 'Name (Z to A)'",
+                  "fullTitle": "Inventory Page - Sorting Functionality Sorting by Name (Z to A) [SRT-UI-ZA-002] should correctly sort products by 'Name (Z to A)'",
+                  "timedOut": null,
+                  "duration": 1016,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_inventory.default.selectSortOption(_constants.SortOptions.NAME_DESC);\n_inventory.default.verifyProductNamesSortedDesc();",
+                  "err": {},
+                  "uuid": "29624a4e-7527-495c-a157-0315dc19a522",
+                  "parentUUID": "3b478a73-e158-4d74-8ac5-c71f10d41c96",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "af781869-0471-4487-a13c-af85c8f9947e",
+                "29624a4e-7527-495c-a157-0315dc19a522"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2059,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "7d9a49f4-0391-4bba-b06e-647fc3bd60e9",
+              "title": "Sorting by Price (low to high)",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "[SRT-UI-LOHI-001] should update the sort dropdown UI when 'Price (low to high)' is selected",
+                  "fullTitle": "Inventory Page - Sorting Functionality Sorting by Price (low to high) [SRT-UI-LOHI-001] should update the sort dropdown UI when 'Price (low to high)' is selected",
+                  "timedOut": null,
+                  "duration": 1023,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_inventory.default.selectSortOption(_constants.SortOptions.PRICE_LOW_TO_HIGH);\n_inventory.default.verifySortValue(\"lohi\");",
+                  "err": {},
+                  "uuid": "0c44642f-f358-48b2-8860-b1fe4557cdc3",
+                  "parentUUID": "7d9a49f4-0391-4bba-b06e-647fc3bd60e9",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "[SRT-UI-LOHI-002] should correctly sort products by 'Price (low to high)'",
+                  "fullTitle": "Inventory Page - Sorting Functionality Sorting by Price (low to high) [SRT-UI-LOHI-002] should correctly sort products by 'Price (low to high)'",
+                  "timedOut": null,
+                  "duration": 1019,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_inventory.default.selectSortOption(_constants.SortOptions.PRICE_LOW_TO_HIGH);\n_inventory.default.verifyPricesSortedLowToHigh();",
+                  "err": {},
+                  "uuid": "fcb58e31-4cb4-469d-88ae-4601db0693b5",
+                  "parentUUID": "7d9a49f4-0391-4bba-b06e-647fc3bd60e9",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "0c44642f-f358-48b2-8860-b1fe4557cdc3",
+                "fcb58e31-4cb4-469d-88ae-4601db0693b5"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2042,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "336b4ce5-1163-488d-bb73-a194d1fc1b29",
+              "title": "Sorting by Price (high to low)",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "[SRT-UI-HILO-001] should update the sort dropdown UI when 'Price (high to low)' is selected",
+                  "fullTitle": "Inventory Page - Sorting Functionality Sorting by Price (high to low) [SRT-UI-HILO-001] should update the sort dropdown UI when 'Price (high to low)' is selected",
+                  "timedOut": null,
+                  "duration": 1040,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_inventory.default.selectSortOption(_constants.SortOptions.PRICE_HIGH_TO_LOW);\n_inventory.default.verifySortValue(\"hilo\");",
+                  "err": {},
+                  "uuid": "4be4df98-78d8-442f-8b2d-ca776e02e201",
+                  "parentUUID": "336b4ce5-1163-488d-bb73-a194d1fc1b29",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "[SRT-UI-HILO-002] should correctly sort products by 'Price (high to low)'",
+                  "fullTitle": "Inventory Page - Sorting Functionality Sorting by Price (high to low) [SRT-UI-HILO-002] should correctly sort products by 'Price (high to low)'",
+                  "timedOut": null,
+                  "duration": 1046,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_inventory.default.selectSortOption(_constants.SortOptions.PRICE_HIGH_TO_LOW);\n_inventory.default.verifyPricesSortedHighToLow();",
+                  "err": {},
+                  "uuid": "36c3ddd0-13af-4b68-8423-0fab63c5eaca",
+                  "parentUUID": "336b4ce5-1163-488d-bb73-a194d1fc1b29",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "4be4df98-78d8-442f-8b2d-ca776e02e201",
+                "36c3ddd0-13af-4b68-8423-0fab63c5eaca"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2086,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

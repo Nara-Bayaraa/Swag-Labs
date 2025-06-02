@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-21T02:02:03.982Z",
+    "end": "2025-05-21T02:02:06.264Z",
+    "duration": 2282,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8fb1e91b-4470-4fbe-8d67-4f1ab57e47af",
+      "title": "",
+      "fullFile": "cypress/e2e/products/checkoutComplete.cy.js",
+      "file": "cypress/e2e/products/checkoutComplete.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bf3f4db6-1cb9-4e79-b351-730a54699f01",
+          "title": "",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "[CKO-COMP-007] Verify that the \"Back Home\" button is functional",
+              "fullTitle": " [CKO-COMP-007] Verify that the \"Back Home\" button is functional",
+              "timedOut": null,
+              "duration": 2238,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_checkoutComplete.default.verifyBackHomeButtonIsClickable();\n_checkoutComplete.default.clickBackHomeButton();\ncy.url().should('include', 'inventory.html');\n_inventory.default.verifyProductListingIsVisible();",
+              "err": {},
+              "uuid": "31680cc8-f484-4593-8b94-a6a51a3a5f68",
+              "parentUUID": "bf3f4db6-1cb9-4e79-b351-730a54699f01",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "31680cc8-f484-4593-8b94-a6a51a3a5f68"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2238,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

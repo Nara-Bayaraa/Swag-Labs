@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-21T02:01:41.245Z",
+    "end": "2025-05-21T02:01:43.726Z",
+    "duration": 2481,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5d407b9d-0799-45ed-b523-78f37602a3fa",
+      "title": "",
+      "fullFile": "cypress/e2e/products/cart.cy.js",
+      "file": "cypress/e2e/products/cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bbd8b326-e195-4b2a-a66e-7f5e5932aa90",
+          "title": "Cart Page Navigation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "[CART-UI-NAV-001] should ensure the “Continue Shopping” button is visible on the cart page",
+              "fullTitle": "Cart Page Navigation [CART-UI-NAV-001] should ensure the “Continue Shopping” button is visible on the cart page",
+              "timedOut": null,
+              "duration": 1186,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_cart.default.verifyContinueShoppingButtonIsVisible();",
+              "err": {},
+              "uuid": "230072fd-a7a9-45ac-b9b7-55376a10bf29",
+              "parentUUID": "bbd8b326-e195-4b2a-a66e-7f5e5932aa90",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "[CART-UI-NAV-002] should return to the Inventory Page when “Continue Shopping” button is clicked",
+              "fullTitle": "Cart Page Navigation [CART-UI-NAV-002] should return to the Inventory Page when “Continue Shopping” button is clicked",
+              "timedOut": null,
+              "duration": 1251,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_cart.default.clickContinueShoppingButton();\ncy.url().should(\"include\", \"/inventory.html\");\n_inventory.default.verifyProductListingIsVisible();",
+              "err": {},
+              "uuid": "23316328-579e-4709-931f-ba3de75333dc",
+              "parentUUID": "bbd8b326-e195-4b2a-a66e-7f5e5932aa90",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "230072fd-a7a9-45ac-b9b7-55376a10bf29",
+            "23316328-579e-4709-931f-ba3de75333dc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2437,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

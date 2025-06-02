@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-22T04:30:49.735Z",
+    "end": "2025-05-22T04:30:51.037Z",
+    "duration": 1302,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f30803e4-0706-4e06-b3a2-2411d091c14a",
+      "title": "",
+      "fullFile": "cypress/e2e/login/login.positive.cy.js",
+      "file": "cypress/e2e/login/login.positive.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "673a1197-dfe9-47df-adc5-e2795b06e886",
+          "title": "UI: User Login and Logout Functionality - Positive Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "c6f6ad9e-3457-4dd1-88db-6dd69e37f3f8",
+              "title": "Login Page Initial UI Elements",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "[LOGIN-UI-POS-001] should display the login page header logo",
+                  "fullTitle": "UI: User Login and Logout Functionality - Positive Tests Login Page Initial UI Elements [LOGIN-UI-POS-001] should display the login page header logo",
+                  "timedOut": null,
+                  "duration": 202,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_login.default.verifyHeaderLogoIsVisible();",
+                  "err": {},
+                  "uuid": "7aa4a811-9b8c-437b-9de0-d8863e10e9a2",
+                  "parentUUID": "c6f6ad9e-3457-4dd1-88db-6dd69e37f3f8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "[LOGIN-UI-POS-002] should display the login form box",
+                  "fullTitle": "UI: User Login and Logout Functionality - Positive Tests Login Page Initial UI Elements [LOGIN-UI-POS-002] should display the login form box",
+                  "timedOut": null,
+                  "duration": 73,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_login.default.verifyLoginFormIsVisible();",
+                  "err": {},
+                  "uuid": "87f60906-7b85-4ed7-be53-00b3c78ebb0a",
+                  "parentUUID": "c6f6ad9e-3457-4dd1-88db-6dd69e37f3f8",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "7aa4a811-9b8c-437b-9de0-d8863e10e9a2",
+                "87f60906-7b85-4ed7-be53-00b3c78ebb0a"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 275,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "d094d29f-c63c-42de-b952-70f90d9f1e8d",
+              "title": "Login Functionality",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "[LOGIN-FUNC-POS-001] should allow a standard user to login successfully and land on the inventory page",
+                  "fullTitle": "UI: User Login and Logout Functionality - Positive Tests Login Functionality [LOGIN-FUNC-POS-001] should allow a standard user to login successfully and land on the inventory page",
+                  "timedOut": null,
+                  "duration": 971,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_login.default.login(Cypress.env(\"standardUsername\"), Cypress.env(\"standardPassword\"));\n_headerComponent.default.verifyInventoryPageHeaderLogoIsExist();\ncy.url().should(\"include\", \"/inventory.html\");",
+                  "err": {},
+                  "uuid": "8fd4e49c-a711-4918-a131-03e007fc6fda",
+                  "parentUUID": "d094d29f-c63c-42de-b952-70f90d9f1e8d",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "8fd4e49c-a711-4918-a131-03e007fc6fda"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 971,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

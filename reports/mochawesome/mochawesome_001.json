@@ -1,0 +1,222 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-21T02:01:26.739Z",
+    "end": "2025-05-21T02:01:29.152Z",
+    "duration": 2413,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e9107456-b681-47ae-a6be-dd8dd29d35d3",
+      "title": "",
+      "fullFile": "cypress/e2e/login/positive-login.cy.js",
+      "file": "cypress/e2e/login/positive-login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6320c11e-f08b-4594-bd48-585cf138684d",
+          "title": "UI: User Login and Logout Functionality - Positive Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "ed1a163a-5689-432c-9362-aa3a06da5d07",
+              "title": "Login Page Initial UI Elements",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "[LOGIN-UI-POS-001] should display the login page header logo",
+                  "fullTitle": "UI: User Login and Logout Functionality - Positive Tests Login Page Initial UI Elements [LOGIN-UI-POS-001] should display the login page header logo",
+                  "timedOut": null,
+                  "duration": 213,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_login.default.verifyHeaderLogoIsVisible();",
+                  "err": {},
+                  "uuid": "41c31a43-1fec-4cdd-ba98-5a2969160f29",
+                  "parentUUID": "ed1a163a-5689-432c-9362-aa3a06da5d07",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "[LOGIN-UI-POS-002] should display the login form box",
+                  "fullTitle": "UI: User Login and Logout Functionality - Positive Tests Login Page Initial UI Elements [LOGIN-UI-POS-002] should display the login form box",
+                  "timedOut": null,
+                  "duration": 77,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_login.default.verifyLoginFormIsVisible();",
+                  "err": {},
+                  "uuid": "5041cf9f-2649-4249-816d-f1272c26d8a2",
+                  "parentUUID": "ed1a163a-5689-432c-9362-aa3a06da5d07",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "41c31a43-1fec-4cdd-ba98-5a2969160f29",
+                "5041cf9f-2649-4249-816d-f1272c26d8a2"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 290,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "584c8f7e-9022-4642-bed1-08318d6c8bda",
+              "title": "Login Functionality",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "[LOGIN-FUNC-POS-001] should allow a standard user to login successfully and land on the inventory page",
+                  "fullTitle": "UI: User Login and Logout Functionality - Positive Tests Login Functionality [LOGIN-FUNC-POS-001] should allow a standard user to login successfully and land on the inventory page",
+                  "timedOut": null,
+                  "duration": 936,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_login.default.login(Cypress.env(\"standardUsername\"), Cypress.env(\"standardPassword\"));\n_headerComponent.default.verifyInventoryPageHeaderLogoIsExist();\ncy.url().should(\"include\", \"/inventory.html\");",
+                  "err": {},
+                  "uuid": "84c940b5-20db-4b67-a5b5-8e7e19e243b7",
+                  "parentUUID": "584c8f7e-9022-4642-bed1-08318d6c8bda",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "84c940b5-20db-4b67-a5b5-8e7e19e243b7"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 936,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "d97f75a2-d5f7-41e7-9cc6-193c95b22207",
+              "title": "Logout Functionality",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "[LOGIN-FUNC-POS-001] should allow a logged-in user to logout successfully and return to the login page",
+                  "fullTitle": "UI: User Login and Logout Functionality - Positive Tests Logout Functionality [LOGIN-FUNC-POS-001] should allow a logged-in user to logout successfully and return to the login page",
+                  "timedOut": null,
+                  "duration": 1100,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_login.default.logout();\ncy.url().should(\"not.include\", \"/inventory.html\");\ncy.url().should(\"include\", \"https://www.saucedemo.com/\");\n_login.default.verifyLoginFormIsVisible();",
+                  "err": {},
+                  "uuid": "436504ec-8807-45c3-9487-cf59f207fd4e",
+                  "parentUUID": "d97f75a2-d5f7-41e7-9cc6-193c95b22207",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "436504ec-8807-45c3-9487-cf59f207fd4e"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1100,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

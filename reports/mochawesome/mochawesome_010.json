@@ -1,0 +1,222 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-22T04:30:42.994Z",
+    "end": "2025-05-22T04:30:48.962Z",
+    "duration": 5968,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f2f6cdba-336f-4c19-bdab-99104a6e0a22",
+      "title": "",
+      "fullFile": "cypress/e2e/login/login.negative.cy.js",
+      "file": "cypress/e2e/login/login.negative.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c67d0942-0371-426e-965b-689c847031b8",
+          "title": "UI: Login Functionality - Negative Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "[LOGIN-UI-NEG-001] should show correct error for valid username and invalid password",
+              "fullTitle": "UI: Login Functionality - Negative Tests [LOGIN-UI-NEG-001] should show correct error for valid username and invalid password",
+              "timedOut": null,
+              "duration": 1875,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.login(Cypress.env(\"standardUsername\"), \"invalidPassword\");\n_login.default.assertLoginErrorMessageIsDisplayed(\"Username and password do not match any user in this service\");",
+              "err": {},
+              "uuid": "15d121f5-6d88-4b50-99ea-0b4babf19e63",
+              "parentUUID": "c67d0942-0371-426e-965b-689c847031b8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "[LOGIN-UI-NEG-004] should show 'Password is required' for valid username and empty password",
+              "fullTitle": "UI: Login Functionality - Negative Tests [LOGIN-UI-NEG-004] should show 'Password is required' for valid username and empty password",
+              "timedOut": null,
+              "duration": 829,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.login(Cypress.env(\"standardUsername\"), \"\");\n_login.default.assertLoginErrorMessageIsDisplayed(\"Password is required\");",
+              "err": {},
+              "uuid": "5ea5aa2b-736a-4ffa-924d-e2ae6bf125c4",
+              "parentUUID": "c67d0942-0371-426e-965b-689c847031b8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "[LOGIN-UI-NEG-005] should show 'Username is required' for empty username and valid password",
+              "fullTitle": "UI: Login Functionality - Negative Tests [LOGIN-UI-NEG-005] should show 'Username is required' for empty username and valid password",
+              "timedOut": null,
+              "duration": 705,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.login(\"\", Cypress.env(\"standardPassword\"));\n_login.default.assertLoginErrorMessageIsDisplayed(\"Username is required\");",
+              "err": {},
+              "uuid": "83f393fe-ab8b-4efa-9168-d6a329155b26",
+              "parentUUID": "c67d0942-0371-426e-965b-689c847031b8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "[LOGIN-UI-NEG-006] should show 'Username is required' for empty username and empty password",
+              "fullTitle": "UI: Login Functionality - Negative Tests [LOGIN-UI-NEG-006] should show 'Username is required' for empty username and empty password",
+              "timedOut": null,
+              "duration": 478,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.login(\"\", \"\");\n_login.default.assertLoginErrorMessageIsDisplayed(\"Epic sadface: Username is required\");",
+              "err": {},
+              "uuid": "8798f471-0a6f-4746-9c31-32cabb5b4fa9",
+              "parentUUID": "c67d0942-0371-426e-965b-689c847031b8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "39645e29-41f6-43a8-931d-da9138ff2249",
+              "title": "Scenario: Invalid Username and Valid Password",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "[LOGIN-UI-NEG-OO2] should show an error message",
+                  "fullTitle": "UI: Login Functionality - Negative Tests Scenario: Invalid Username and Valid Password [LOGIN-UI-NEG-OO2] should show an error message",
+                  "timedOut": null,
+                  "duration": 911,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_login.default.assertLoginErrorMessageIsDisplayed(\"Epic sadface: Username and password do not match any user in this service\");",
+                  "err": {},
+                  "uuid": "673a5bb8-b8ad-456d-b8aa-0c30d511fda6",
+                  "parentUUID": "39645e29-41f6-43a8-931d-da9138ff2249",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "[LOGIN-UI-NEG-003] should allow closing the error message",
+                  "fullTitle": "UI: Login Functionality - Negative Tests Scenario: Invalid Username and Valid Password [LOGIN-UI-NEG-003] should allow closing the error message",
+                  "timedOut": null,
+                  "duration": 998,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_login.default.assertLoginErrorMessageIsDisplayed(\"Epic sadface: Username and password do not match any user in this service\");\n_login.default.closeLoginErrorMessage();\n_login.default.verifyLoginErrorMessageIsNotVisible();",
+                  "err": {},
+                  "uuid": "4c6bae7c-cdb5-45ec-a43c-6765e9ddcc4c",
+                  "parentUUID": "39645e29-41f6-43a8-931d-da9138ff2249",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "673a5bb8-b8ad-456d-b8aa-0c30d511fda6",
+                "4c6bae7c-cdb5-45ec-a43c-6765e9ddcc4c"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1909,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "15d121f5-6d88-4b50-99ea-0b4babf19e63",
+            "5ea5aa2b-736a-4ffa-924d-e2ae6bf125c4",
+            "83f393fe-ab8b-4efa-9168-d6a329155b26",
+            "8798f471-0a6f-4746-9c31-32cabb5b4fa9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3887,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

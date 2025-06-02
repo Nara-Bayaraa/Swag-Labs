@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-22T04:31:36.790Z",
+    "end": "2025-05-22T04:31:37.915Z",
+    "duration": 1125,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e6a4846d-35f6-4911-a284-2af3f251c7fa",
+      "title": "",
+      "fullFile": "cypress/e2e/products/inventory.cy.js",
+      "file": "cypress/e2e/products/inventory.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "16700c76-6a3b-4468-bc1c-93f9d0cd6a8c",
+          "title": "Inventory Page - Post-Login Verification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "f9f10737-21d7-4423-81f0-b689aa570915",
+              "title": "Inventory Items Verification",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "[INV-UI-INV-COUNT-001] should display the correct number of products",
+                  "fullTitle": "Inventory Page - Post-Login Verification Inventory Items Verification [INV-UI-INV-COUNT-001] should display the correct number of products",
+                  "timedOut": null,
+                  "duration": 1077,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_inventory.default.verifyProductCount(allProductCount);",
+                  "err": {},
+                  "uuid": "2f925407-5360-41d9-b27a-938016ecff5d",
+                  "parentUUID": "f9f10737-21d7-4423-81f0-b689aa570915",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "2f925407-5360-41d9-b27a-938016ecff5d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1077,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
