@@ -82,7 +82,7 @@ cypress/
 * **Node.js** (e.g., LTS version ^18.x or ^20.x recommended - *specify a version or range if important*)
 * npm (usually comes with Node.js) or yarn
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 * JavaScript
 * **Node.js** (as the runtime environment)
@@ -222,13 +222,13 @@ jobs:
 
 ---
 
-## License
+## 📜 License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 ---
 
-## Future Enhancements
+## 💥 Future Enhancements
 
 * Add more negative and edge case scenarios
 * Run tests across multiple browsers
