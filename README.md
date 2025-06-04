@@ -1,5 +1,5 @@
 ---
-# 🛍️ Swag Labs UI Testing 
+# 🛒 Swag Labs UI Testing 
 
 ##💻 Project Overview
 
@@ -8,7 +8,7 @@ The suite validates crucial e-commerce operations like login, product listing, s
 
 ---
 
-## 🗂️ Project Structure
+##  📂 Project Structure
 
 ```
 cypress/
@@ -43,7 +43,7 @@ cypress/
 
 ---
 
-## Key Features
+## ✨ Key Features
 
 * Cypress test automation with Page Object Model (POM)
 * Positive and negative login scenarios
@@ -55,7 +55,8 @@ cypress/
 * GitHub Actions CI workflow with a single parallel job for simplicity
 
 ---
-## 🛠️ Getting Started
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -76,7 +77,7 @@ cypress/
 
 ---
 
-## ⚙️ Setup Instructions
+## ⚙️ Setup & Installation
 
 ### 1. Clone the repository
 
@@ -91,7 +92,7 @@ cd Swag-Labs
 npm install
 ```
 
-### 3. Run Tests
+## 🧪 Running Tests
 
 Run all tests in the terminal:
 
@@ -124,7 +125,7 @@ npm run cy:parallel
 
 
 
-### 4. Generate Test Report
+### 📊 Generate Test Report
 
 After running tests, merge and generate HTML reports:
 
@@ -187,14 +188,16 @@ jobs:
           STANDARD_USER_PASSWORD: ${{ secrets.STANDARD_USER_PASSWORD }}
         run: npm run cy:parallel
 ```
+
 ---
+
 ## 📝  Contributing
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature-name`
 3. Commit your changes: `git commit -m "Add: feature or fix description"`
 4. Push to your branch: `git push origin feature-name`
-5. Open a pull request for review
+5. Open a Pull Request against the main branch for review.
 
 ---
 
@@ -208,6 +211,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 * Add more negative and edge case scenarios
 * Run tests across multiple browsers
+* Expand test coverage (edge cases, user flows)
 
 ---
 
