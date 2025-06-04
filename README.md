@@ -26,6 +26,11 @@ The suite validates crucial e-commerce operations like login, product listing, s
 
 ## 🕒 Automated CI Schedule
 
+```
+schedule:
+    - cron: '0 11 * * *'   #run every day at  5:00 AM Chicago time (CST)
+```
+
 - **Nightly runs:**  
   This project’s test suite is **automatically triggered every day at 5:00 AM Chicago time (CST)** via a scheduled GitHub Actions workflow.
 
