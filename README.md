@@ -1,10 +1,41 @@
 ---
 # 🛒 Swag Labs UI Testing 
 
+---
+
 ##💻 Project Overview
 
 This project automates UI testing for the Swag Labs web application using Cypress, incorporating the Page Object Model (POM) to enhance test maintainability and scalability. 
 The suite validates crucial e-commerce operations like login, product listing, sorting, cart management, checkout, and order confirmation, aiming to deliver a reliable and seamless user experience.
+
+---
+
+## ✨ Key Features
+
+* Cypress test automation with Page Object Model (POM)
+* Positive and negative login scenarios
+* Product sorting and detail validations
+* Add to cart, cart content checks, and state reset
+* Full checkout process: form fill, overview, and confirmation
+* **Parallel test execution using `cypress-parallel`**
+* HTML reporting with Mochawesome
+* GitHub Actions CI workflow with a single parallel job for simplicity
+
+---
+
+
+## 🕒 Automated CI Schedule
+
+- **Nightly runs:**  
+  This project’s test suite is **automatically triggered every day at 5:00 AM Chicago time (CST)** via a scheduled GitHub Actions workflow.
+
+- **Configuration:**  
+  The schedule is managed using this [cron expression](https://crontab.guru/#0_11_*_*_*):
+
+- **Purpose:**  
+Purpose:
+Automatically checks test health and coverage daily, so you don’t have to run tests manually.
+All test results and reports are generated and can be accessed in the GitHub Actions workflow logs and artifacts.
 
 ---
 
@@ -43,18 +74,6 @@ cypress/
 
 ---
 
-## ✨ Key Features
-
-* Cypress test automation with Page Object Model (POM)
-* Positive and negative login scenarios
-* Product sorting and detail validations
-* Add to cart, cart content checks, and state reset
-* Full checkout process: form fill, overview, and confirmation
-* **Parallel test execution using `cypress-parallel`**
-* HTML reporting with Mochawesome
-* GitHub Actions CI workflow with a single parallel job for simplicity
-
----
 
 ## 🚀 Getting Started
 
@@ -92,6 +111,8 @@ cd Swag-Labs
 npm install
 ```
 
+---
+
 ## 🧪 Running Tests
 
 Run all tests in the terminal:
@@ -123,7 +144,7 @@ Run all E2E tests in parallel (recommended for CI or local multi-core):
 npm run cy:parallel
 ```
 
-
+---
 
 ### 📊 Generate Test Report
 
@@ -215,5 +236,5 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ---
 
-Happy testing ✨
+Happy testing 🚀
 ---
