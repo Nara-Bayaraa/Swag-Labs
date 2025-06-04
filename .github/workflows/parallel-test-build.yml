@@ -30,7 +30,8 @@ jobs:
             ${{ runner.os }}-npm-cache-
       - name: Install dependencies
         run: npm ci
-
+      - name: Clean reports folder
+        run: rm -rf reports
       - name: Run Cypress E2E tests in parallel
 
         env:
