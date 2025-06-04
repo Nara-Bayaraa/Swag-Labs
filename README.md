@@ -135,31 +135,7 @@ npx serve cypress/reports/html
 
 ---
 
-## Available NPM Scripts
 
-```json
-"scripts": {
-  "cy:open": "cypress open",
-  "cy:run": "cypress run --browser chrome",
-  "test:all": "cypress run --browser chrome",
-  "test:login": "cypress run --spec 'cypress/e2e/login/*.cy.js' --browser chrome",
-  "test:inventory": "cypress run --spec 'cypress/e2e/inventory/*.cy.js' --browser chrome",
-  "test:cart": "cypress run --spec 'cypress/e2e/cart/*.cy.js' --browser chrome",
-  "test:product": "cypress run --spec 'cypress/e2e/product/*.cy.js' --browser chrome",
-  "test:checkout": "cypress run --spec 'cypress/e2e/checkout/*.cy.js' --browser chrome",
-  "test:sidebar": "cypress run --spec 'cypress/e2e/sidebar/*.cy.js' --browser chrome",
-  "cy:parallel": "cypress-parallel -s cy:run -t 5 -d 'cypress/e2e/**/*.cy.js' -e '**/*.DS_Store'",
-  "cy:parallel:products": "cypress-parallel -s cy:run -t 8 -d 'cypress/e2e/products/**/*.cy.js' -e '**/*.DS_Store'",
-  "cy:parallel:login": "cypress-parallel -s cy:run -t 2 -d 'cypress/e2e/login/**/*.cy.js' -e '**/*.DS_Store'",
-  "clean:reports": "rm -rf cypress/reports",
-  "pretest": "npm run clean:reports",
-  "merge:reports": "mochawesome-merge cypress/reports/mochawesome/*.json > cypress/reports/mochawesome.json",
-  "generate:report": "marge cypress/reports/mochawesome/*.json -f report -o cypress/reports/html",
-  "test:report": "npm run cy:run || true && npm run merge:reports && npm run generate:report"
-}
-```
-
----
 
 ## Continuous Integration
 
@@ -202,8 +178,6 @@ jobs:
         run: npm ci
 
       - name: Run Cypress E2E tests in parallel
-        # Wildcards in the npm script mean new test files are picked up automatically—
-        # no need to change scripts or workflow config when adding more tests.
         env:
           STANDARD_USER_USERNAME: ${{ secrets.STANDARD_USER_USERNAME }}
           STANDARD_USER_PASSWORD: ${{ secrets.STANDARD_USER_PASSWORD }}
@@ -215,9 +189,9 @@ jobs:
 ## Contributing
 
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/your-feature-name`
+2. Create a feature branch: `git checkout -b feature-name`
 3. Commit your changes: `git commit -m "Add: feature or fix description"`
-4. Push to your branch: `git push origin feature/your-feature-name`
+4. Push to your branch: `git push origin feature-name`
 5. Open a pull request for review
 
 ---
@@ -230,7 +204,6 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## Future Enhancements
 
-* Add visual regression and accessibility tests
 * Add more negative and edge case scenarios
 * Run tests across multiple browsers
 
@@ -239,5 +212,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 Happy testing ✨
 
 ---
-
-**Let me know if you want this as a markdown file, or want to add badges or more documentation examples!**
