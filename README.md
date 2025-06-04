@@ -26,7 +26,7 @@ The suite validates crucial e-commerce operations like login, product listing, s
 
 ## 🕒 Automated CI Schedule
 
-```
+```bash
 schedule:
     - cron: '0 11 * * *'   #run every day at  5:00 AM Chicago time (CST)
 ```
@@ -107,7 +107,7 @@ cypress/
 
 ```bash
 git clone https://github.com/Nara-Bayaraa/Swag-Labs.git
-cd Swag-Labs
+
 ```
 
 ### 2. Install dependencies
