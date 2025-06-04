@@ -107,7 +107,7 @@ cypress/
 
 ```bash
 git clone https://github.com/Nara-Bayaraa/Swag-Labs.git
-
+cd Swag-Labs
 ```
 
 ### 2. Install dependencies
