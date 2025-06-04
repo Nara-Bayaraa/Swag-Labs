@@ -3,7 +3,7 @@
 
 ---
 
-##💻 Project Overview
+## 💻 Project Overview
 
 This project automates UI testing for the Swag Labs web application using Cypress, incorporating the Page Object Model (POM) to enhance test maintainability and scalability. 
 The suite validates crucial e-commerce operations like login, product listing, sorting, cart management, checkout, and order confirmation, aiming to deliver a reliable and seamless user experience.
