@@ -39,6 +39,9 @@ jobs:
           STANDARD_USER_PASSWORD: ${{ secrets.STANDARD_USER_PASSWORD }}
         run: npm run cy:parallel
 
+      - name: Clean reports folder
+        run: rm -rf reports
+
       - name: Merge Mochawesome Reports
         run: npm run merge:reports
 

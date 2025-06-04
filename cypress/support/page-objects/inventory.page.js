@@ -111,7 +111,7 @@ class InventoryPage {
     this.productItems.each(($item) => {
       const name = $item.find(".inventory_item_name").text().trim();
       if (name === productName) {
-        cy.wrap($item).find("button").click(); // Clicks the Add to Cart button in that card
+        cy.wrap($item).find("button").click(); 
       }
     });
   }

@@ -18,7 +18,7 @@
     "test:checkout": "cypress run --spec 'cypress/e2e/checkout/*.cy.js' --browser chrome",
     "test:sidebar": "cypress run --spec 'cypress/e2e/sidebar/*.cy.js' --browser chrome",
     "cy:parallel": "cypress-parallel -s cy:run -t 5 -d 'cypress/e2e/**/*.cy.js' -e '**/*.DS_Store'",
-    "clean:reports": "rm -rf cypress/reports",
+    "clean:reports": "rm -rf reports",
     "pretest": "npm run clean:reports",
     "merge:reports": "mochawesome-merge reports/mochawesome/*.json > reports/mochawesome.json",
     "generate:report": "marge reports/mochawesome.json -f report -o reports/html",

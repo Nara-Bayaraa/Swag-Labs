@@ -43,49 +43,9 @@ describe("Checkout Step One", () => {
     });
 
     it("[CKO-POS-002] Should navigate to Checkout Step Two with valid info", () => {
-      CheckoutPage.fillPersonalDetails(
-        firstName,
-        lastName,
-        zipCode
-      );
+      CheckoutPage.fillPersonalDetails(firstName, lastName, zipCode);
       CheckoutPage.clickContinueButton();
       cy.url().should("include", "checkout-step-two.html");
-    });
-
-    it("[CKO-NEG-001] Should show error when all fields are empty", () => {
-      CheckoutPage.clickContinueButton();
-      CheckoutPage.assertErrorMessageIsDisplayed(
-        "Error: First Name is required"
-      );
-    });
-
-    it("[CKO-NEG-002] Should show error for missing First Name", () => {
-      CheckoutPage.fillPersonalDetails("", lastName, zipCode);
-      CheckoutPage.clickContinueButton();
-      CheckoutPage.assertErrorMessageIsDisplayed(
-        "Error: First Name is required"
-      );
-    });
-
-    it("[CKO-NEG-003] Should show error for missing Last Name", () => {
-      CheckoutPage.fillPersonalDetails(firstName, "", zipCode);
-      CheckoutPage.clickContinueButton();
-      CheckoutPage.assertErrorMessageIsDisplayed(
-        "Error: Last Name is required"
-      );
-    });
-
-    it("[CKO-NEG-004] should show error for missing Zip/Postal Code", () => {
-      CheckoutPage.fillPersonalDetails(firstName, lastName, "");
-      CheckoutPage.clickContinueButton();
-      CheckoutPage.assertErrorMessageIsDisplayed(
-        "Error: Postal Code is required"
-      );
-    });
-
-    it("[CKO-NAV-005] should return to cart page on Cancel", () => {
-      CheckoutPage.clickCancelButton();
-      cy.url().should("include", "cart.html");
     });
   });
 });

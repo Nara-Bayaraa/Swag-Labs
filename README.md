@@ -13,24 +13,11 @@ The tests validate core e-commerce flows such as login, product listing, sorting
 cypress/
   e2e/
     cart/
-      cart.cy.js
     checkout/
-      checkout-complete.cy.js
-      checkout-overview-multiple-items.cy.js
-      checkout-overview-single-item.cy.js
-      checkout.cy.js
     inventory/
-      inventory-post-login.cy.js
-      inventory-responsive.cy.js
-      Inventory-sort.cy.js
     login/
-      login-negative.cy.js
-      login-positive.cy.js
-      logout-postive.cy.js
     product/
-      product-detail.cy.js
     sidebar/
-      sidebar-menu.cy.js
   fixtures/                 # Static test data
   reports/                  # Generated Mochawesome reports
   screenshots/              # Cypress screenshots

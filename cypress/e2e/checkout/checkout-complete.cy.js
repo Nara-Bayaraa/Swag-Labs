@@ -41,7 +41,7 @@ CheckoutOverviewPage.clickFinishButton();
     CheckoutCompletePage.verifyBackHomeButtonColorIsCorrect();
   });
 
-  it.only('[CKO-COMP-007] Should navigate to inventory when "Back Home" button is clicked', () => {
+  it('[CKO-COMP-007] Should navigate to inventory when "Back Home" button is clicked', () => {
     CheckoutCompletePage.verifyBackHomeButtonIsClickable();
     CheckoutCompletePage.clickBackHomeButton()
     cy.url().should('include', 'inventory.html');

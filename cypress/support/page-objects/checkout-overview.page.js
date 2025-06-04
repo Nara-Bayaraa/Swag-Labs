@@ -64,9 +64,9 @@ class OverviewPage {
   }
   verifyFinishButtonIsVisible() {
     this.finishButton
-      .should("exist") // ensures it’s in the DOM
-      .should("be.visible") // ensures it's visible
-      .and("not.be.disabled"); // for buttons
+      .should("exist") 
+      .should("be.visible") 
+      .and("not.be.disabled"); 
   }
   verifyFinishButtonIsVisible(){
     this.finishButton.should('be.enabled')
