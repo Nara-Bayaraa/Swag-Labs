@@ -51,5 +51,5 @@ jobs:
       - name: Upload HTML Report Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: mochawesome-html
+          name: mochawesome-report
           path: reports/html/
