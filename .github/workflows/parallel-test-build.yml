@@ -32,6 +32,8 @@ jobs:
         run: npm ci
       - name: Clean reports folder
         run: rm -rf reports
+      - name: Recreate reports folder
+        run: mkdir -p reports/mochawesome
       - name: Run Cypress E2E tests in parallel
 
         env:
@@ -41,8 +43,7 @@ jobs:
 
       - name: Merge Mochawesome Reports
         run: npm run merge:reports
-      - name: Recreate reports folder
-        run: mkdir -p reports/mochawesome
+  
 
 
       - name: Generate HTML Report
