@@ -41,6 +41,9 @@ jobs:
 
       - name: Merge Mochawesome Reports
         run: npm run merge:reports
+      - name: Recreate reports folder
+        run: mkdir -p reports/mochawesome
+
 
       - name: Generate HTML Report
         run: npm run generate:report
