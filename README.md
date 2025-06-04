@@ -174,6 +174,8 @@ A single job runs all E2E Cypress tests in parallel using the `cy:parallel` scri
 name: Parallel Test Build
 
 on:
+  schedule:
+    - cron: '0 11 * * *'   #run every day at  5:00 AM Chicago time (CST)
   workflow_dispatch:
   pull_request:
     types: [opened, reopened, edited, synchronize]
