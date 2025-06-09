@@ -1,9 +1,9 @@
 ---
-# 🛒 Swag Labs UI Testing 
+#  Swag Labs UI Testing 🛒
 
 ---
 
-##💻 Project Overview
+## 💻 Project Overview
 
 This project automates UI testing for the Swag Labs web application using Cypress, incorporating the Page Object Model (POM) to enhance test maintainability and scalability. 
 The suite validates crucial e-commerce operations like login, product listing, sorting, cart management, checkout, and order confirmation, aiming to deliver a reliable and seamless user experience.
@@ -25,6 +25,11 @@ The suite validates crucial e-commerce operations like login, product listing, s
 
 
 ## 🕒 Automated CI Schedule
+
+```bash
+schedule:
+    - cron: '0 11 * * *'   #run every day at  5:00 AM Chicago time (CST)
+```
 
 - **Nightly runs:**  
   This project’s test suite is **automatically triggered every day at 5:00 AM Chicago time (CST)** via a scheduled GitHub Actions workflow.
@@ -82,7 +87,7 @@ cypress/
 * **Node.js** (e.g., LTS version ^18.x or ^20.x recommended - *specify a version or range if important*)
 * npm (usually comes with Node.js) or yarn
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 * JavaScript
 * **Node.js** (as the runtime environment)
@@ -174,6 +179,8 @@ A single job runs all E2E Cypress tests in parallel using the `cy:parallel` scri
 name: Parallel Test Build
 
 on:
+  schedule:
+    - cron: '0 11 * * *'   #run every day at  5:00 AM Chicago time (CST)
   workflow_dispatch:
   pull_request:
     types: [opened, reopened, edited, synchronize]
@@ -222,13 +229,13 @@ jobs:
 
 ---
 
-## License
+## 📜 License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 ---
 
-## Future Enhancements
+## 💥 Future Enhancements
 
 * Add more negative and edge case scenarios
 * Run tests across multiple browsers
