@@ -1,4 +1,4 @@
-name: Parallel Test Build
+name: Swag-Labs Parallel Test Build
 
 on:
   schedule:
