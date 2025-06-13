@@ -8,8 +8,6 @@ This repository contains an end-to-end UI automation suite for the [Swag Labs](h
 The suite validates critical e-commerce workflows—login, product listing, cart management, checkout, and order confirmation—ensuring a robust, user-friendly shopping experience.
 
 * **Purpose:** Demonstrate best practices in scalable, maintainable UI test automation with modern JavaScript tooling.
-* **Audience:** QA Engineers, SDETs, and technical recruiters seeking practical automation experience with CI/CD.
-
 ---
 
 ## ✨ Key Features
