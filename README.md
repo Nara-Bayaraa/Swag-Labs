@@ -173,7 +173,8 @@ npx serve reports/html
 This project uses GitHub Actions with a parallel CI pipeline.
 A single job runs all E2E Cypress tests in parallel using the `cy:parallel` script, speeding up test feedback and reducing maintenance.
 
-### **Workflow Example**
+<details>
+<summary>Click to expand sample workflow</summary>
 
 ```yaml
 name: Parallel Test Build
@@ -216,7 +217,7 @@ jobs:
           STANDARD_USER_PASSWORD: ${{ secrets.STANDARD_USER_PASSWORD }}
         run: npm run cy:parallel
 ```
-
+</details>
 ---
 
 ## 📝  Contributing
