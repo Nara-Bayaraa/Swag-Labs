@@ -46,6 +46,9 @@ All test results and reports are generated and can be accessed in the GitHub Act
 
 ##  📂 Project Structure
 
+<details>
+<summary>Click to expand project structure</summary>
+
 ```
 cypress/
 ├── e2e/                     # Contains all End-to-End test specifications
@@ -76,6 +79,7 @@ cypress/
     ├── constants.js         # Stores global constants like CSS selectors or frequently used strings
     └── e2e.js               # Common test utilities and configurations loaded before test files
 ```
+</details>
 
 ---
 
@@ -218,6 +222,7 @@ jobs:
         run: npm run cy:parallel
 ```
 </details>
+
 ---
 
 ## 📝  Contributing
