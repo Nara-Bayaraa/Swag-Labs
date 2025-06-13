@@ -84,12 +84,6 @@ cypress/
 ---
 
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-* **Node.js** (e.g., LTS version ^18.x or ^20.x recommended - *specify a version or range if important*)
-* npm (usually comes with Node.js) or yarn
 
 ## 🛠️ Tech Stack
 
@@ -178,7 +172,7 @@ This project uses GitHub Actions with a parallel CI pipeline.
 A single job runs all E2E Cypress tests in parallel using the `cy:parallel` script, speeding up test feedback and reducing maintenance.
 
 <details>
-<summary>Click to expand sample workflow</summary>
+### <summary> Click to expand sample workflow</summary>
 
 ```yaml
 name: Parallel Test Build
