@@ -205,3 +205,9 @@ Nara Bayaraa, QA Automation Engineer based in Chicago, IL
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](./LICENSE) for details.
+
+---
+
+**Happy Testing! 🚀**
+
+---
