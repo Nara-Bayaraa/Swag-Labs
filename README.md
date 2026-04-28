@@ -1,116 +1,116 @@
----
+# Swag Labs UI Test Automation
 
-# 🛒 Swag Labs UI Test Automation
+End to end UI automation suite for the [Swag Labs](https://www.saucedemo.com/) e-commerce web application, built with Cypress and the Page Object Model design pattern.
 
-## 💻 Project Overview
+The suite validates critical e-commerce workflows including login, product listing, cart management, checkout, and order confirmation, ensuring a robust shopping experience.
 
-This repository contains an end-to-end UI automation suite for the [Swag Labs](https://www.saucedemo.com/) e-commerce web application, built with **Cypress** and the **Page Object Model (POM)** design pattern.
-The suite validates critical e-commerce workflows—login, product listing, cart management, checkout, and order confirmation—ensuring a robust, user-friendly shopping experience.
+## Why this project
 
-* **Purpose:** Demonstrate best practices in scalable, maintainable UI test automation with modern JavaScript tooling.
----
+I built this framework to demonstrate scalable, maintainable UI test automation with modern JavaScript tooling. It covers the full e-commerce user journey on a real demo application, with parallel execution and nightly CI runs to mirror how production teams actually run their suites.
 
-## ✨ Key Features
+## Tech stack
 
-* **Cypress E2E Automation:** Fast, reliable UI testing.
-* **Page Object Model:** Modular, DRY, and scalable codebase.
-* **Robust Test Coverage:** Positive & negative login, product sorting, cart, checkout, and order flows.
-* **Parallel Test Execution:** Faster feedback using `cypress-parallel`.
-* **Automated CI:** GitHub Actions runs tests daily at 5:00 AM CST.
-* **Clear Reporting:** HTML reports via Mochawesome for easy results sharing.
-* **Easy Data Management:** Uses Faker.js for dynamic user and test data.
+| Tool | Version | Purpose |
+| --- | --- | --- |
+| Cypress | 14.1.0 | E2E browser automation |
+| Node.js | 20.x | JavaScript runtime |
+| Mochawesome | 7.1.3 | HTML reporting |
+| mochawesome-merge | 1.0.1 | Merge parallel reports |
+| Faker.js | 9.8.0 | Dynamic test data generation |
+| cypress-parallel | 0.15.0 | Parallel test execution |
+| dotenv | 16.4.7 | Environment variables |
+| GitHub Actions | latest | CI/CD pipeline |
 
----
+## Skills demonstrated
 
-## 🕒 Automated CI Schedule
+- End to end UI automation with Cypress
+- Page Object Model architecture
+- Positive and negative test coverage
+- Parallel test execution for faster feedback
+- Scheduled CI runs with GitHub Actions
+- HTML reporting with Mochawesome
+- Dynamic test data generation with Faker.js
+- Custom Cypress commands and reusable utilities
+- Secrets management with GitHub Actions secrets
 
-The test suite runs automatically every day at **5:00 AM CST** via a scheduled GitHub Actions workflow.
+## Test coverage
 
-```yaml
-schedule:
-    - cron: '0 11 * * *'   # 5:00 AM Chicago time
-```
+Test suites organized by feature area.
 
-* **Nightly Runs:** Keeps test health and project quality in check—no manual intervention needed.
-* **Results:** Reports are accessible in the GitHub Actions workflow logs and as downloadable artifacts.
+**Login flows.** Standard user login, locked out user, problem user, performance glitch user, invalid credentials.
 
----
+**Inventory and product flows.** Product listing display, sorting by name and price, product detail page navigation.
 
-## 📂 Project Structure
+**Cart flows.** Add to cart, remove from cart, cart badge count, persistence across pages.
 
-<details>
-<summary>Expand to view folder structure</summary>
+**Checkout flows.** Information form validation, overview page totals, order completion, success page.
+
+**Sidebar and navigation.** Menu open and close, logout, reset app state, about link.
+
+## Project structure
 
 ```
 cypress/
-├── e2e/                     # E2E test suites
-│   ├── cart/                # Cart tests
-│   ├── checkout/            # Checkout tests
-│   ├── inventory/           # Inventory/product listing tests
-│   ├── login/               # Login/auth tests
-│   ├── product/             # Product detail tests
-│   └── sidebar/             # Sidebar/navigation tests
-├── fixtures/                # Test data (e.g. JSON)
-├── reports/                 # Mochawesome HTML reports
-├── screenshots/             # Failure screenshots
+├── e2e/
+│   ├── cart/
+│   ├── checkout/
+│   ├── inventory/
+│   ├── login/
+│   ├── product/
+│   └── sidebar/
+├── fixtures/
+├── reports/
+├── screenshots/
 └── support/
     ├── helpers/
-    │   └── generate-user-data.js   # Faker.js utilities
-    ├── page-objects/               # Page Object files
-    ├── commands.js                 # Custom Cypress commands
-    ├── constants.js                # Reusable constants
-    └── e2e.js                      # Common configs/utilities
+    │   └── generate-user-data.js
+    ├── page-objects/
+    ├── commands.js
+    ├── constants.js
+    └── e2e.js
 ```
 
-</details>
+## Automated CI schedule
 
----
+The test suite runs automatically every day at 5:00 AM CST via a scheduled GitHub Actions workflow.
 
-## 🛠️ Tech Stack
+```yaml
+schedule:
+  - cron: '0 11 * * *'   # 5:00 AM Chicago time
+```
 
-* **JavaScript**, **Node.js**
-* [Cypress](https://docs.cypress.io/) ^14.1.0
-* [Mochawesome](https://github.com/adamgruber/mochawesome) ^7.1.3
-* [Marge](https://github.com/marcomontalbano/marge) ^1.0.1
-* [dotenv](https://www.npmjs.com/package/dotenv) ^16.4.7
-* [@faker-js/faker](https://fakerjs.dev/) ^9.8.0
-* [cypress-parallel](https://www.npmjs.com/package/cypress-parallel) ^0.15.0
-* **GitHub Actions** for CI/CD
+Nightly runs catch regressions early without manual intervention. Reports are accessible in the GitHub Actions workflow logs and as downloadable artifacts.
 
----
+## How to run
 
-## ⚙️ Getting Started
+**Prerequisites:** Node.js 20 or higher, npm installed.
 
-#### 1. Clone the repository
+Clone the repo:
 
 ```bash
 git clone https://github.com/Nara-Bayaraa/Swag-Labs.git
 cd Swag-Labs
 ```
 
-#### 2. Install dependencies
+Install dependencies:
 
 ```bash
 npm install
 ```
 
----
-
-## 🧪 Running Tests
-
-**Run all tests (headless):**
+Run all tests headless:
 
 ```bash
 npm run cy:run
 ```
 
-**Run tests in Cypress GUI:**
+Open Cypress GUI:
 
 ```bash
 npm run cy:open
 ```
 
-**Run individual suites:**
+Run a specific suite:
 
 ```bash
 npm run test:login
@@ -121,17 +121,15 @@ npm run test:checkout
 npm run test:sidebar
 ```
 
-**Run all tests in parallel (recommended for CI or multi-core):**
+Run all tests in parallel:
 
 ```bash
 npm run cy:parallel
 ```
 
----
+## Reports
 
-## 📊 Generating Test Reports
-
-After running tests, generate and view reports:
+After a test run, generate and view the HTML report:
 
 ```bash
 npm run merge:reports
@@ -139,17 +137,17 @@ npm run generate:report
 npx serve reports/html
 ```
 
----
+| Report | Path |
+| --- | --- |
+| HTML report | `reports/html/index.html` |
+| Failure screenshots | `cypress/screenshots/` |
+| Raw JSON results | `reports/.jsons/` |
 
-## 🤖 Continuous Integration
+## Continuous integration
 
-**Fully automated with [GitHub Actions](https://github.com/features/actions):**
+Fully automated with GitHub Actions.
 
-* Triggers on every push, PR, and on a daily schedule.
-* Installs dependencies, runs Cypress tests in parallel, and uploads HTML reports as artifacts.
-
-<details>
-<summary>View sample CI workflow YAML</summary>
+Triggers on every push to main, every pull request, and on a daily schedule. The workflow installs dependencies, runs Cypress tests in parallel, and uploads HTML reports as downloadable artifacts.
 
 ```yaml
 name: Parallel Test Build
@@ -185,34 +183,25 @@ jobs:
         run: npm run cy:parallel
 ```
 
-</details>
+## Test data management
 
----
+Test data is generated on the fly using Faker.js through the `generate-user-data.js` helper. Sensitive credentials such as the standard user username and password are stored as GitHub Actions secrets and injected at runtime, never committed to the repo.
 
-## 📝 Contributing
+## Roadmap
 
-1. **Fork** the repository
-2. **Create a branch:** `git checkout -b feature/your-feature`
-3. **Commit changes:** `git commit -m "Add: your feature or fix"`
-4. **Push to your branch:** `git push origin feature/your-feature`
-5. **Open a Pull Request** for review
+- Broaden negative and edge case scenario coverage
+- Add cross browser testing support for Firefox and Edge
+- Expand to additional user journeys including account settings and password reset
+- Add visual regression testing with Percy or Applitools
 
----
+## Author
 
-## 📜 License
+Nara Bayaraa, QA Automation Engineer based in Chicago, IL
 
-This project is licensed under the [MIT License](./LICENSE).
+- GitHub: https://github.com/Nara-Bayaraa
+- LinkedIn: https://linkedin.com/in/Nara-Bayaraa
+- Email: narab.qa@gmail.com
 
----
+## License
 
-## 💡 Roadmap / Future Enhancements
-
-* Broaden negative and edge case scenario coverage
-* Cross-browser testing support
-* Expand to cover additional user journeys
-
----
-
-**Happy Testing! 🚀**
-
----
+This project is licensed under the MIT License. See [LICENSE](./LICENSE) for details.
